@@ -20,7 +20,6 @@ function getEmailDomain(emailAddress1) {
     // TEST LOG: console.log(domainName);
     return domainName;
 }
-getEmailDomain("t.mellink@novi.nl");
 console.log(getEmailDomain("t.mellink@novi.nl"));
 
 
@@ -44,16 +43,17 @@ function typeOfEmail(emailaddress2) {
     // TEST LOG: console.log("de functie is gestart:" + emailaddress2);
 
     if (getEmailDomain(emailaddress2).includes("novi.nl")) {
-        console.log("Deze persoon met maildomein '" + getEmailDomain(emailaddress2) + "' is een: 'Medewerker'");
+        return "Deze persoon met maildomein '" + getEmailDomain(emailaddress2) + "' is een: 'Medewerker'";
     }
     if (getEmailDomain(emailaddress2).includes("novi-education.nl")) {
-        console.log("Deze persoon met maildomein '" + getEmailDomain(emailaddress2) + "' is een: 'Student'");
+        return "Deze persoon met maildomein '" + getEmailDomain(emailaddress2) + "' is een: 'Student'";
     }
     if (getEmailDomain(emailaddress2).includes("outlook.com")) {
-        console.log("Deze persoon met maildomein '" + getEmailDomain(emailaddress2) + "' is: 'Extern'");
+        return "Deze persoon met maildomein '" + getEmailDomain(emailaddress2) + "' is: 'Extern'";
     }
 }
-typeOfEmail("novi.nlaapjesk@outlook.com");
+
+console.log(typeOfEmail("novi.nlaapjesk@outlook.com"));
 
 /* Opdracht  3 */
 // Schrijf een functie genaamd checkEmailValidity, die een emailadres verwacht en checkt of het emailadres valide is. De functie returned true of false, afhankelijk van de uitkomst.
@@ -77,12 +77,10 @@ function checkEmailValidity(emailaddress3) {
 
     if (!(emailaddress3.includes("@"))) {
         console.log("Dit adres: '" + emailaddress3 + "' mist een apenstaartje.");
-        console.log(false);
         return false;
     }
     if (emailaddress3.includes(",")) {
         console.log("Dit adres: '" + emailaddress3 + "' is fout want er zit een komma in.");
-        console.log(false);
         return false;
     }
     //checken of de punt op het eind staat
@@ -90,14 +88,12 @@ function checkEmailValidity(emailaddress3) {
 
     if (checkEmailaddress3 == ".") {
         console.log("Dit adres: '" + emailaddress3 + "' is fout want er staat een punt op het eind.");
-        console.log(false);
         return false;
     }
     //    de returns stoppen de functie dus: de correcte statement moet helemaal op het eind
     if ((emailaddress3.includes("@"))) {
         console.log("Dit adres: '" + emailaddress3 + "' is correct.");
-        console.log(true);
         return true;
     }
 }
-checkEmailValidity("tessmellink@novi,nl");
+console.log(checkEmailValidity("tessmellink@novi,nl"));
