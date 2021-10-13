@@ -20,7 +20,9 @@ function getEmailDomain(emailAddress1) {
     // TEST LOG: console.log(domainName);
     return domainName;
 }
+console.log(getEmailDomain("n.eeken@novi-education.nl"));
 console.log(getEmailDomain("t.mellink@novi.nl"));
+console.log(getEmailDomain("a.wiersma@outlook.com"));
 
 
 /* Opdracht  2 */
@@ -33,7 +35,7 @@ console.log(getEmailDomain("t.mellink@novi.nl"));
 
 // TEST LOG
 // let emailaddress2 = "t.mellink@novi.nl";
-console.log("Opdracht  2:");
+console.log("\nOpdracht  2:");
 
 function typeOfEmail(emailaddress2) {
     // eigenlijk willen we niet het hele emailadres, maar alleen het stuk erna/domein checken:
@@ -53,7 +55,10 @@ function typeOfEmail(emailaddress2) {
     }
 }
 
+console.log(typeOfEmail("n.eeken@novi-education.nl"));
+console.log(typeOfEmail("t.mellink@novi.nl"));
 console.log(typeOfEmail("novi.nlaapjesk@outlook.com"));
+console.log(typeOfEmail("a.wiersma@outlook.com"));
 
 /* Opdracht  3 */
 // Schrijf een functie genaamd checkEmailValidity, die een emailadres verwacht en checkt of het emailadres valide is. De functie returned true of false, afhankelijk van de uitkomst.
@@ -68,7 +73,7 @@ console.log(typeOfEmail("novi.nlaapjesk@outlook.com"));
 // checkEmailValidity("n.eeken@novinl.") geeft false - want de punt mag niet als laatst
 // checkEmailValidity("tessmellink@novi,nl") geeft false - want er staat een komma in
 
-console.log("Opdracht  3:");
+console.log("\nOpdracht  3:");
 
 function checkEmailValidity(emailaddress3) {
     // nu willen we weer het hele emailadres checken, dus incl. domein
@@ -96,4 +101,8 @@ function checkEmailValidity(emailaddress3) {
         return true;
     }
 }
+console.log(checkEmailValidity("n.eeken@novi.nl"));
+console.log(checkEmailValidity("tessmellink@novi.nl"));
+console.log(checkEmailValidity("n.eekenanovi.nl"));
+console.log(checkEmailValidity("n.eeken@novinl."));
 console.log(checkEmailValidity("tessmellink@novi,nl"));
